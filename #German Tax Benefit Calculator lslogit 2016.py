@@ -25,11 +25,11 @@ def postgov_by_hours(pid, hours_1, hours_2):
     labor_income_1= float(MASEdata_2016["labor_income"][i])
     if labor_income_1 != labor_income_1:
         labor_income_1 = 0 #!
-    age_1= MASEdata_2016["age"][i] #şimoş yeni burası
+    age_1= MASEdata_2016["age"][i] 
     #worktime_weekly= MASEdata_2016["worktime_weekly"][i]
     Alg2= MASEdata_2016["ALG2"][i]
     partner= MASEdata_2016["partner"][i]
-    gender_1= MASEdata_2016["gender"][i] #şimoş yeni burası
+    gender_1= MASEdata_2016["gender"][i]
 
     maternity_months= MASEdata_2016["maternity_months"][i]
     part_time_experince= MASEdata_2016["part_time_experience"][i]
@@ -58,16 +58,16 @@ def postgov_by_hours(pid, hours_1, hours_2):
     working=MASEdata_2016["working"][i]
     log_wages=MASEdata_2016["log_wages"][i]
     
-    age_1=MASEdata_2016["age"][i] #şimoş yeni burası
+    age_1=MASEdata_2016["age"][i] 
     unemployed_time=MASEdata_2016["unemployed_time"][i]
     partner_in_house=MASEdata_2016["partner_in_house"][i]
     partner_number=MASEdata_2016["partner_number"][i]
     work_experience=MASEdata_2016["work_experience"][i]
     hid=MASEdata_2016["hid"][i]
-    disabled_1= MASEdata_2016["disabled_1"][i] #şimoş yeni burası
+    disabled_1= MASEdata_2016["disabled_1"][i]
     syear=MASEdata_2016["syear"][i]
-    education_1=MASEdata_2016["education"] #şimoş yeni burası
-    rhours_1 = MASEdata_2016["hours"][i] #bu line yeni şimoş
+    education_1=MASEdata_2016["education"] 
+    rhours_1 = MASEdata_2016["hours"][i] 
     if partner>=1 and partner<=4:
         partner=1
     else:
@@ -92,12 +92,12 @@ def postgov_by_hours(pid, hours_1, hours_2):
             social_assistance_2= MASEdata_2016["social_assistance"][partner_index]
             if social_assistance_2 != social_assistance_2:
                 social_assistance_2 = 0
-            disabled_2= MASEdata_2016["disabled_1"][partner_index] #şimoş yeni burası
-            education_2= MASEdata_2016["education"][partner_index] #bu line yeni şimoş
-            age_2= MASEdata_2016["age"][partner_index] #bu line yeni şimoş
+            disabled_2= MASEdata_2016["disabled_1"][partner_index] 
+            education_2= MASEdata_2016["education"][partner_index] 
+            age_2= MASEdata_2016["age"][partner_index] 
             
-            rhours_2 = MASEdata_2016["hours"][partner_index] #bu line yeni şimoş
-            gender_2 = MASEdata_2016["gender"][partner_index] #bu line yeni şimoş
+            rhours_2 = MASEdata_2016["hours"][partner_index] 
+            gender_2 = MASEdata_2016["gender"][partner_index] 
             if "1" in gender_2:
                 gender_2=1
             elif "2" in gender_2:
@@ -117,7 +117,7 @@ def postgov_by_hours(pid, hours_1, hours_2):
     if partner == 0:
         if num_of_children == 0:
             if gender_1 == 1:
-                marital_status = 1 #single man  bu linelar hep yeni şimoş
+                marital_status = 1 #single man  
             elif gender_1 == 2:
                 marital_status = 2  #single woman
             else:
@@ -502,7 +502,7 @@ for i in range(MASEdata_2016.shape[0]):
     if pid in seen:
         continue
     else:
-        gender_1= MASEdata_2016["gender"][i] #bu line yeni şimoş
+        gender_1= MASEdata_2016["gender"][i] 
         partner= MASEdata_2016["partner"][i]
         if partner>=1 and partner<=4:
             partner=1
@@ -533,7 +533,7 @@ for i in range(MASEdata_2016.shape[0]):
     labor_income_1= float(MASEdata_2016["labor_income"][i])
     if labor_income_1 != labor_income_1:
         labor_income_1 = 0
-    age_1= MASEdata_2016["age"][i] #bu line yeni şimoş
+    age_1= MASEdata_2016["age"][i] 
     
     private_transfers=MASEdata_2016["private_transfers"][i]
     Alg2= MASEdata_2016["ALG2"][i]
@@ -568,13 +568,13 @@ for i in range(MASEdata_2016.shape[0]):
     hours_1=MASEdata_2016["hours"][i]
     if  hours_1 != hours_1:
         hours_1 = 0
-    age_1=MASEdata_2016["age"][i] #bu line da yeni şimoş
+    age_1=MASEdata_2016["age"][i] 
     unemployed_time=MASEdata_2016["unemployed_time"][i]
     partner_in_house=MASEdata_2016["partner_in_house"][i]
     partner_number=MASEdata_2016["partner_number"][i]
     work_experience=MASEdata_2016["work_experience"][i]
     hid=MASEdata_2016["hid"][i]
-    education_1= MASEdata_2016["education"][i] #bu line yeni şimoş
+    education_1= MASEdata_2016["education"][i] 
     disabled_1= MASEdata_2016["disabled_1"][i]
 
     if partner>=1 and partner<=4:
@@ -583,7 +583,7 @@ for i in range(MASEdata_2016.shape[0]):
         partner=0
 
     num_hh_members= 1+partner+num_of_children 
-    rhours_1 = MASEdata_2016["hours"][i] #bu line yeni şimoş
+    rhours_1 = MASEdata_2016["hours"][i] 
 
     
    
@@ -607,11 +607,11 @@ for i in range(MASEdata_2016.shape[0]):
             if  social_assistance_2 != social_assistance_2:
                 social_assistance_2 = 0
             disabled_2= MASEdata_2016["disabled_1"][partner_index]
-            education_2= MASEdata_2016["education"][partner_index] #bu line yeni şimoş
-            age_2= MASEdata_2016["age"][partner_index] #bu line yeni şimoş
+            education_2= MASEdata_2016["education"][partner_index] 
+            age_2= MASEdata_2016["age"][partner_index] 
         
-            rhours_2 = MASEdata_2016["hours"][partner_index] #bu line yeni şimoş
-            gender_2 = MASEdata_2016["gender"][partner_index] #bu line yeni şimoş
+            rhours_2 = MASEdata_2016["hours"][partner_index] 
+            gender_2 = MASEdata_2016["gender"][partner_index] 
             if "1" in gender_2:
                 gender_2=1
             elif "2" in gender_2:
@@ -626,7 +626,7 @@ for i in range(MASEdata_2016.shape[0]):
     if partner == 0:
         if num_of_children == 0:
             if gender_1 == 1:
-                marital_status = 1 #single man  bu linelar hep yeni şimoş
+                marital_status = 1 #single man  
             elif gender_1 == 2:
                 marital_status = 2  #single woman
             else:
@@ -1007,7 +1007,7 @@ for i in range(MASEdata_2016.shape[0]):
                 choice = 1 if job1 == chosen_hours1 and job2 == chosen_hours2 else 0
 
                 post_gov_calc, gets_ALG1, gets_other = postgov_by_hours(pid, job1, job2) #!!!!!!!!!!!!!
-                results2016.append([partner,syear,hid,pid,wage_1, job1, chosen_hours1, 80- job1, partner_number, wage_2, job2, chosen_hours2, 80-job2,post_gov_calc,(wage_1 * job1+wage_2*job2)*weeks+asset_income+private_transfers, choice, gets_ALG1, gets_other, education_1, education_2,age_1, age_2, state, n_child_0_1, n_child_2_4,n_child_5_7,n_child_8_10,n_child_11_12,n_child_13_15,n_child_16_18,marital_status,disabled_1,disabled_2]) #results appended bu line yeni şimoş
+                results2016.append([partner,syear,hid,pid,wage_1, job1, chosen_hours1, 80- job1, partner_number, wage_2, job2, chosen_hours2, 80-job2,post_gov_calc,(wage_1 * job1+wage_2*job2)*weeks+asset_income+private_transfers, choice, gets_ALG1, gets_other, education_1, education_2,age_1, age_2, state, n_child_0_1, n_child_2_4,n_child_5_7,n_child_8_10,n_child_11_12,n_child_13_15,n_child_16_18,marital_status,disabled_1,disabled_2]) #results appended 
     else:
         chosen_hours1 = min(job_choices, key=lambda x:abs(x-hours_1))
         for job1 in [0,10,20,30,40,50,60]:
@@ -1015,7 +1015,7 @@ for i in range(MASEdata_2016.shape[0]):
 
             post_gov_calc, gets_ALG1, gets_other = postgov_by_hours(pid, job1, 0) #!!!!!!!!!!!!!
             
-            results2016.append([partner,syear,hid,pid,wage_1, job1, chosen_hours1, 80- job1, 0, 0, 0, 0, 0, post_gov_calc, (wage_1 * job1)*weeks+asset_income+private_transfers,choice, gets_ALG1, gets_other, education_1, "",age_1, "", state, n_child_0_1, n_child_2_4,n_child_5_7,n_child_8_10,n_child_11_12,n_child_13_15,n_child_16_18,marital_status,disabled_1,""])#!!!!!!!!!!!!! results appended bu line yeni şimoş
+            results2016.append([partner,syear,hid,pid,wage_1, job1, chosen_hours1, 80- job1, 0, 0, 0, 0, 0, post_gov_calc, (wage_1 * job1)*weeks+asset_income+private_transfers,choice, gets_ALG1, gets_other, education_1, "",age_1, "", state, n_child_0_1, n_child_2_4,n_child_5_7,n_child_8_10,n_child_11_12,n_child_13_15,n_child_16_18,marital_status,disabled_1,""])#!!!!!!!!!!!!! results appended 
     
 
 pdresults= pd.DataFrame(results2016)
