@@ -162,7 +162,7 @@ def postgov_by_hours(pid, hours_1, hours_2):
 
     labor_income_1 = wage_1 * hours_1 * 4.33 #!
     if partner == 1:
-        labor_income_2 = wage_2 * hours_2 * 4.33 #!
+        labor_income_2 = wage_2 * hours_2 * 4.33 
 
     if partner==0:
         health_contributions= h_i*min(labor_income_1, ssch)
